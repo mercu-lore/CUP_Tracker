@@ -102,6 +102,25 @@ Questa scelta serve anche a evitare cambi o cancellazioni indesiderati vicino al
 
 Riferimenti ufficiali: [CUP Liguria e gestione delle disdette](https://www.regione.liguria.it/homepage-salute/come-fare-per/cup-liguria.html), [documentazione regionale sulle liste di attesa e sulle disdette](https://www.regione.liguria.it/components/com_publiccompetitions/includes/download.php?id=78011%3Adocumenti-formato-open.pdf), [ASL 5: recupero del ticket per mancata disdetta](https://www.asl5.liguria.it/Home/RECUPERODELTICKETPERMANCATADISDETTA.aspx).
 
+## 🖥️ Installazione e accesso rapido su Windows
+
+L’installer **EXE include Electron, Python e il backend compilato**: non crea
+un virtualenv sul tuo computer e non richiede di installare Python, Node.js o
+Electron separatamente. I collegamenti sono disponibili sul desktop e nel menu Start.
+
+Con l’app in esecuzione trovi il logo CUP Tracker nell’**area di notifica vicino
+all’orologio**, eventualmente nel pannello aperto dalla freccia **˄**. Un clic
+apre il pannello; il tasto destro permette di mostrare/nascondere l’icona flottante
+o chiudere l’app. Nascondere l’icona non ferma il monitoraggio; chiudere l’app sì.
+
+L’app usa un **blocco di istanza unica**: un secondo avvio per lo stesso archivio
+riporta in primo piano il pannello già aperto, senza duplicare backend e monitoraggi.
+I dati restano nella cartella locale dell’utente anche alla disinstallazione.
+
+Sono previste anche versioni **macOS Intel e Apple Silicon**, dopo l’adattamento
+della protezione dei dati al Portachiavi macOS e le build/test su Mac. Non sono
+ancora disponibili e non c’è una data di rilascio.
+
 ## 💻 Risorse misurate nel prototipo Windows
 
 Misura locale del **9 ottobre 2026**, versione **1.04**, su Windows 11 con
@@ -140,7 +159,8 @@ stati misurati in questa prova.
 | **Liguria** | Prima integrazione del progetto, attualmente in sviluppo e verifica sul flusso PrenotoSalute. |
 | **Toscana** | Integrazione in lavorazione. Il monitoraggio automatico non è disponibile nella v1.04 attuale. |
 | **Altre regioni** | Possibili sviluppi futuri, senza una data o una copertura garantita. |
-| **Installer Windows** | In preparazione per rendere l’app utilizzabile senza configurazioni tecniche manuali. |
+| **Installer Windows** | EXE autonomo disponibile come build locale di prova; distribuzione pubblica dopo le verifiche. |
+| **macOS Intel e Apple Silicon** | Versioni previste, ancora da implementare e verificare. Nessun installer Mac disponibile al momento e nessuna data di rilascio. |
 | **Distribuzione dell’app** | Arriverà dopo le verifiche dei flussi, dei documenti, delle notifiche e dell’installazione. |
 
 L’obiettivo è partire da un’app semplice da installare, affidabile nei passaggi più delicati e comprensibile anche quando il portale non restituisce posti o segnala un errore.
