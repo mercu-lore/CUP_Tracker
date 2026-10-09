@@ -102,6 +102,37 @@ Questa scelta serve anche a evitare cambi o cancellazioni indesiderati vicino al
 
 Riferimenti ufficiali: [CUP Liguria e gestione delle disdette](https://www.regione.liguria.it/homepage-salute/come-fare-per/cup-liguria.html), [documentazione regionale sulle liste di attesa e sulle disdette](https://www.regione.liguria.it/components/com_publiccompetitions/includes/download.php?id=78011%3Adocumenti-formato-open.pdf), [ASL 5: recupero del ticket per mancata disdetta](https://www.asl5.liguria.it/Home/RECUPERODELTICKETPERMANCATADISDETTA.aspx).
 
+## 💻 Risorse misurate nel prototipo Windows
+
+Misura locale del **9 ottobre 2026**, versione **1.04**, su Windows 11 con
+AMD Ryzen 9 5900X (24 processori logici) e 64 GiB di RAM. È stata usata l’app
+compilata, con un archivio di prova vuoto e senza ricette attive: nessuna chiamata
+al CUP, prenotazione o notifica Telegram. Sono inclusi tutti i processi Electron
+e il backend Python (**7 processi**).
+
+| Condizione | Memoria residente totale¹ | Memoria privata impegnata² | CPU media³ |
+| :--- | ---: | ---: | ---: |
+| In background | 598.9 MiB | 251.4 MiB | 0.02% |
+| Pannello aperto | 605.4 MiB | 248.7 MiB | 0.00% |
+
+**Installer:** 121.0 MiB. **Cartella dell’app compilata:** 433.2 MiB,
+esclusi archivi personali e documenti esportati.
+
+15 campioni per condizione, con almeno un secondo tra i campioni; i primi 5
+sono esclusi dai valori della tabella. Memoria: mediana dei campioni rimanenti.
+CPU: media, normalizzata sulla capacità complessiva dei 24 processori logici.
+
+¹ Somma dei working set dei processi: include pagine condivise, che possono
+essere contate più volte. È un’indicazione della memoria residente, non della
+RAM fisica esclusiva dell’app. ² Memoria privata impegnata, che può essere
+residente oppure paginata: non equivale alla sola RAM occupata.
+³ Misura a riposo, dopo la fase iniziale.
+
+Questi valori descrivono una prova breve su un solo computer, non requisiti
+minimi o massimi garantiti. Ricerca CUP, monitoraggio attivo, esportazione PDF,
+quantità di ricette e uso prolungato possono produrre consumi diversi; non sono
+stati misurati in questa prova.
+
 ## 🗺️ Regioni e prossimi passi
 
 | Area | Stato |
