@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🗓️ CUP Tracker
+<img src="docs/images/logo.svg" alt="CUP Tracker" width="420" />
 
 ### Meno tempo a cercare. Più tempo per te.
 
@@ -47,6 +47,16 @@ Le funzioni seguenti sono implementate nel prototipo della v1.04 e in fase di ve
 | **Ricordare gli appuntamenti** | Ricevere una conferma dopo la prenotazione e un promemoria il giorno prima, con l’app in esecuzione. |
 
 La copertura dipende dalla regione, dalla ricetta e dalle operazioni consentite dal portale. Le funzioni del prototipo non equivalgono ancora a una versione pubblica convalidata per ogni prestazione.
+
+**Non tutte le prestazioni sono prenotabili online.** La prenotabilità è stabilita dai servizi del portale **PrenotoSalute di Regione Liguria**: CUP Tracker segue le possibilità offerte dal portale. Quando una prestazione non è prenotabile online, l’app indicherà il **numero verde CUP da chiamare** per proseguire attraverso i canali ufficiali.
+
+## 📸 Uno sguardo all’app
+
+Schermate del prototipo in modalità demo: **dati fittizi e disponibilità simulate**, senza prenotazioni reali. L’interfaccia potrà cambiare prima del rilascio.
+
+| Ricette e monitoraggio | Disponibilità e sedi |
+| :---: | :---: |
+| <img src="docs/images/monitoraggio.png" alt="Elenco delle ricette monitorate con dati demo" width="360" /> | <img src="docs/images/disponibilita.png" alt="Dettaglio delle disponibilità simulate in sedi diverse" width="360" /> |
 
 ## 🔎 Come funziona il monitoraggio
 
@@ -117,5 +127,7 @@ Per capire cosa migliorare sono utili osservazioni su chiarezza, accessibilità 
 **Nato da un’esigenza quotidiana. Costruito per diventare utile a tutti.**
 
 Gratuito · Indipendente · Dati conservati sul dispositivo
+
+**CUP Tracker è un progetto indipendente, non ufficiale e non sponsorizzato da Regione Liguria.** Non è affiliato, patrocinato, autorizzato o sostenuto da Regione Liguria, Regione Toscana, Liguria Digitale, ASL o altri enti sanitari. I nomi dei servizi e degli enti sono citati soltanto per descrivere le integrazioni.
 
 </div>
