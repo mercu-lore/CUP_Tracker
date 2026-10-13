@@ -2,183 +2,112 @@
 
 <img src="docs/images/logo.svg" alt="CUP Tracker" width="420" />
 
-### Meno tempo a cercare. Più tempo per te.
+### Trova una visita senza controllare continuamente il CUP.
 
-Un’app desktop gratuita per seguire le disponibilità di visite ed esami,
-ricevere avvisi e gestire i tuoi appuntamenti sanitari.
+CUP Tracker monitora le disponibilità per visite ed esami medici,
+ti avvisa quando trova un appuntamento disponibile e ti lascia decidere se prenotare.
 
-**Gratuita** · **Dati sul dispositivo** · **Profili per te e i tuoi familiari**
+**Gratuito** · **Open source (Apache 2.0)** · **App desktop per Windows** · **Dati sul tuo computer**
 
-**Liguria: in sviluppo e verifica** · **Toscana: integrazione in lavorazione**
+[cuptracker.r3dsi.com](https://cuptracker.r3dsi.com)
 
 </div>
 
 ---
 
-> **Stato del progetto:** la versione **1.04 è in preparazione**. L’applicazione e il suo installer sono ancora in sviluppo: questo repository, per ora, presenta il progetto attraverso il solo README. Non contiene un’app pronta da scaricare.
+> **Stato del progetto: pre-lancio.** Stiamo completando l’installer per Windows e le ultime verifiche. Il download non è ancora disponibile e non abbiamo annunciato una data di rilascio. Per ora questo repository presenta il progetto: il codice sorgente sarà pubblicato qui con licenza Apache 2.0.
 >
-> **Progetto indipendente:** CUP Tracker non è affiliato, autorizzato o patrocinato da Regione Liguria, Regione Toscana, Liguria Digitale, ASL o altri enti del servizio sanitario.
+> CUP Tracker è un progetto indipendente di R3DSI, non affiliato né finanziato dalla Regione Liguria, dalla Regione Toscana o da enti sanitari. Non è un servizio sanitario ufficiale.
 
-## 💙 Perché nasce
+## Perché nasce
 
-Cercare una visita o un esame può significare tornare sul portale più volte, controllare le stesse sedi e sperare che si liberi un posto. Per alcune prestazioni, come un’ecografia, le disponibilità possono essere poche e cambiare nel tempo.
+Cercare una visita o un esame può significare tornare sul portale più volte al giorno, controllare le stesse sedi e sperare che si liberi un posto. CUP Tracker nasce da questa esperienza concreta: rendere più semplice accorgersi di una disponibilità utile, anche per chi non ha competenze tecniche o aiuta un familiare.
 
-CUP Tracker nasce da questa esperienza concreta: rendere più semplice accorgersi di una disponibilità utile e tenere insieme ricette, appuntamenti e documenti.
+**Sarà gratuito.** Non vogliamo lucrare sull’accesso alle cure: niente abbonamenti né funzioni a pagamento. L’eventuale ticket sanitario si paga direttamente all’ente sanitario tramite pagoPA, come previsto dal servizio.
 
-Oggi il progetto viene sviluppato e provato da un piccolo gruppo di persone. Vogliamo trasformare questo beneficio in uno strumento accessibile a tutti, anche a chi non ha competenze tecniche o aiuta un familiare a gestire le prenotazioni.
+## Come funziona
 
-**L’app sarà gratuita. Non vogliamo lucrare sulla difficoltà di accedere alle cure:** non sono previsti abbonamenti né funzioni di prenotazione vendute a pagamento. Restano naturalmente gli eventuali ticket e costi delle prestazioni stabiliti dal servizio sanitario.
+1. **Parti dalla tua prescrizione.** Ti serve una ricetta elettronica (impegnativa) per la visita o l’esame.
+2. **Configura il monitoraggio.** Scegli periodo, fascia oraria, giorni feriali ed eventuale sede preferita. Se hai già un appuntamento, puoi cercare solo date precedenti.
+3. **CUP Tracker verifica le disponibilità.** Dal tuo computer consulta periodicamente il portale CUP, con controlli distanziati. L’app deve restare aperta, anche in background, e connessa a Internet.
+4. **Ricevi l’avviso e decidi tu.** Quando trova un appuntamento disponibile ricevi una notifica con date, orari e sedi, e prenoti attraverso i canali ufficiali del CUP.
 
-## ✨ Cosa potrai fare
+**Nessuna prenotazione viene effettuata automaticamente.** Il monitoraggio cerca e avvisa: non prenota, non cambia e non annulla appuntamenti. Un avviso non riserva il posto: la disponibilità può cambiare prima che tu prenoti.
 
-Le funzioni seguenti sono implementate nel prototipo della v1.04 e in fase di verifica prima della distribuzione.
+<div align="center">
+<img src="docs/images/app-elenco.png" alt="Schermata di CUP Tracker con l’elenco delle ricette monitorate e una disponibilità trovata (dati dimostrativi)" width="360" />
+<br />
+<sub>Schermata reale dell’app in modalità dimostrativa: dati fittizi e disponibilità simulate. L’interfaccia può cambiare prima del rilascio.</sub>
+</div>
 
-| Funzione | Come ti aiuta |
+## Funzionalità
+
+| Funzione | Stato |
 | :--- | :--- |
-| **Cercare visite ed esami** | Consultare le sedi e gli orari restituiti dal CUP per la tua ricetta. |
-| **Monitorare nuove disponibilità** | Ricevere un avviso quando compaiono posti compatibili con il periodo e gli orari scelti. |
-| **Cercare un appuntamento prima** | Monitorare date precedenti a una prenotazione già esistente. |
-| **Gestire più profili** | Seguire le tue ricette e quelle di familiari o altre persone che ti hanno autorizzato. |
-| **Ricevere notifiche** | Vedere gli aggiornamenti nell’app e, se lo desideri, su Telegram. |
-| **Prenotare con conferma esplicita** | Scegliere sede, giorno e ora e confermare personalmente l’operazione. |
-| **Aggiungere una prenotazione esistente** | Collegare un appuntamento usando numero di prenotazione e codice di verifica. |
-| **Cambiare o annullare un appuntamento** | Gestire le operazioni supportate dal portale, dopo la tua conferma. |
-| **Salvare i documenti** | Conservare promemoria, ricevute e documenti disponibili nelle cartelle che scegli. |
-| **Ricordare gli appuntamenti** | Ricevere una conferma dopo la prenotazione e un promemoria il giorno prima, con l’app in esecuzione. |
+| Monitoraggio delle disponibilità per la tua ricetta | Prima versione |
+| Ricerca di date anticipate rispetto a un appuntamento esistente | Prima versione |
+| Notifiche nell’app e, se vuoi, su Telegram | Prima versione |
+| Più profili, per te e per familiari che ti hanno autorizzato | Prima versione |
+| Periodo, fascia oraria, giorni feriali e sede preferita | Prima versione |
+| Prenotazione dall’app, sempre con la tua conferma | In arrivo |
+| Documenti e promemoria degli appuntamenti | In arrivo |
 
-La copertura dipende dalla regione, dalla ricetta e dalle operazioni consentite dal portale. Le funzioni del prototipo non equivalgono ancora a una versione pubblica convalidata per ogni prestazione.
+CUP Tracker non crea disponibilità e non garantisce tempi di attesa: ti aiuta ad accorgerti dei posti che il CUP rende disponibili. La prenotabilità online dipende dalla ricetta e dal portale regionale.
 
-**Non tutte le prestazioni sono prenotabili online.** La prenotabilità è stabilita dai servizi del portale **PrenotoSalute di Regione Liguria**: CUP Tracker segue le possibilità offerte dal portale. Quando una prestazione non è prenotabile online, l’app indicherà il **numero verde CUP da chiamare** per proseguire attraverso i canali ufficiali.
+## Profili per te e per chi aiuti
 
-## 📸 Uno sguardo all’app
+Puoi creare profili separati per te, un genitore, il partner o un’altra persona che ti ha autorizzato. Ogni profilo ha le proprie ricette e preferenze. Gestire il profilo di un’altra persona richiede il suo consenso: avere i suoi dati non sostituisce questa autorizzazione.
 
-Schermate del prototipo in modalità demo: **dati fittizi e disponibilità simulate**, senza prenotazioni reali. L’interfaccia potrà cambiare prima del rilascio.
+## I tuoi dati
 
-| Ricette e monitoraggio | Disponibilità e sedi |
-| :---: | :---: |
-| <img src="docs/images/monitoraggio.png" alt="Elenco delle ricette monitorate con dati demo" width="360" /> | <img src="docs/images/disponibilita.png" alt="Dettaglio delle disponibilità simulate in sedi diverse" width="360" /> |
+- **Conservati sul tuo computer.** Profili, ricette e appuntamenti sono salvati in un archivio cifrato con AES-256-GCM, con la chiave protetta da Windows DPAPI. R3DSI non gestisce server che ricevono questi dati e non serve creare un account. L’app non include telemetria o analytics.
+- **Comunicazioni con il CUP.** Salvataggio locale non significa assenza di comunicazioni: per cercare disponibilità l’app invia via HTTPS, direttamente al portale regionale, i dati richiesti dal servizio (ad esempio codice fiscale, parte del numero di tessera sanitaria, recapito e numero di ricetta).
+- **Telegram è facoltativo.** Se lo attivi, le notifiche passano dai server di Telegram tramite il tuo bot personale e contengono solo l’alias del profilo oppure il nome, con date, orari e sedi. Non contengono cognome, codice fiscale, tessera sanitaria, numero di ricetta o codici di prenotazione.
 
-## 🔎 Come funziona il monitoraggio
+## Uso responsabile
 
-1. **Scegli il profilo** e inserisci il numero della ricetta elettronica.
-2. **Imposta le preferenze:** periodo, fascia oraria, eventuali giorni feriali e sede preferita facoltativa.
-3. **Attiva il monitoraggio.** Se hai indicato una sede preferita, il primo controllo parte da quella sede; poi la ricerca prosegue nelle altre, con richieste distanziate.
-4. **Ricevi un riepilogo:** una notifica nell’app e, se configurato, un messaggio Telegram con il totale degli orari e dei giorni e le sedi trovate.
-5. **Apri le date trovate.** L’app aggiorna la disponibilità prima di accompagnarti alla scelta e alla conferma della prenotazione.
+CUP Tracker usa solo le funzioni di consultazione che il portale offre a ogni cittadino, con i dati dell’assistito, come farebbe una persona dal proprio computer:
 
-La sede preferita **non esclude le altre sedi**. Il monitoraggio può aiutarti sia prima della prima prenotazione sia quando cerchi una data anticipata. Dopo un risultato continua a cercare, fino alla pausa, alla fine del periodo impostato o alla disattivazione.
+- controlli distanziati di **almeno 30 minuti** per ricetta, sospesi temporaneamente quando il CUP segnala limiti o errori;
+- l’app si identifica come CUP Tracker, senza fingersi un browser;
+- nessun tentativo di aggirare blocchi, code o protezioni del portale.
 
-Le disponibilità possono cambiare tra il controllo e la conferma: un avviso non riserva un posto. L’app consulta le agende esposte dal CUP e non può creare disponibilità che il portale non ha pubblicato. In caso di errori o limiti del servizio, sospende temporaneamente i controlli e mostra il motivo.
-
-**Il monitoraggio e i promemoria funzionano dal tuo computer:** l’app deve essere aperta, anche in background, e connessa a Internet. Non continuano da un nostro server quando il dispositivo è spento.
-
-## 👨‍👩‍👧 Profili per te e per chi aiuti
-
-Puoi creare profili separati per te, un genitore, il partner o un’altra persona che ti ha autorizzato. Ogni profilo conserva le proprie ricette, preferenze e prenotazioni.
-
-Il profilo prevede **nome, cognome e alias facoltativo**. Su Telegram viene usato l’alias, se compilato, oppure soltanto il nome; il cognome non viene incluso automaticamente nei messaggi.
-
-Gestire un profilo altrui richiede il consenso o l’autorizzazione della persona interessata e il rispetto delle regole del servizio sanitario. Avere i suoi dati non sostituisce questa autorizzazione.
-
-## 🔐 I dati restano sotto il tuo controllo
-
-CUP Tracker non usa un nostro server per raccogliere profili, ricette o prenotazioni. La conservazione dei dati avviene sul dispositivo: nel prototipo Windows, l’archivio locale è cifrato e la chiave è protetta tramite il sistema operativo.
-
-Per consultare o gestire un appuntamento, l’app comunica direttamente con i servizi regionali e trasmette i dati necessari a quella richiesta. **Salvataggio locale non significa assenza di comunicazioni esterne.**
-
-Telegram è facoltativo. Se lo attivi, i messaggi vengono inviati tramite il tuo bot ai servizi Telegram: nome o alias, date, orari e sedi possono quindi uscire dal dispositivo. Il nome della prestazione viene incluso soltanto con l’apposita scelta nelle impostazioni. Codice fiscale, numero della tessera sanitaria e NRE non sono destinati ai messaggi Telegram.
-
-I PDF che esporti sono salvati nella cartella scelta da te. Una volta esportati, sono file normali: la cifratura dell’archivio dell’app non protegge automaticamente quelle copie. Se scegli una cartella sincronizzata con un servizio cloud, i documenti seguono le impostazioni di quel servizio.
-
-Il flusso Liguria utilizza i dati richiesti dal portale per ricetta e assistito; non richiede di consegnare all’app le tue credenziali SPID.
-
-## 🧭 Nella v1.04 la decisione resta tua
-
-**Il monitoraggio non prenota, non cambia e non annulla appuntamenti automaticamente.** Cerca disponibilità e ti avvisa. Le operazioni sul CUP richiedono una tua scelta e conferma esplicita.
-
-Una possibile automazione delle prenotazioni sarà valutata soltanto in futuro. Non è presente nella v1.04 e non è una promessa di rilascio.
-
-Questa scelta serve anche a evitare cambi o cancellazioni indesiderati vicino all’appuntamento. La documentazione regionale richiama termini di disdetta, tra cui **almeno due giorni lavorativi (48 ore)**, e possibili addebiti per mancata o tardiva disdetta, con eccezioni e modalità specifiche. Non va interpretata come una regola universale di 48 ore di calendario: prima di annullare occorre verificare le indicazioni aggiornate del CUP e della struttura.
-
-Riferimenti ufficiali: [CUP Liguria e gestione delle disdette](https://www.regione.liguria.it/homepage-salute/come-fare-per/cup-liguria.html), [documentazione regionale sulle liste di attesa e sulle disdette](https://www.regione.liguria.it/components/com_publiccompetitions/includes/download.php?id=78011%3Adocumenti-formato-open.pdf), [ASL 5: recupero del ticket per mancata disdetta](https://www.asl5.liguria.it/Home/RECUPERODELTICKETPERMANCATADISDETTA.aspx).
-
-## 🖥️ Installazione e accesso rapido su Windows
-
-L’installer **EXE include Electron, Python e il backend compilato**: non crea
-un virtualenv sul tuo computer e non richiede di installare Python, Node.js o
-Electron separatamente. I collegamenti sono disponibili sul desktop e nel menu Start.
-
-Con l’app in esecuzione trovi il logo CUP Tracker nell’**area di notifica vicino
-all’orologio**, eventualmente nel pannello aperto dalla freccia **˄**. Un clic
-apre il pannello; il tasto destro permette di mostrare/nascondere l’icona flottante
-o chiudere l’app. Nascondere l’icona non ferma il monitoraggio; chiudere l’app sì.
-
-L’app usa un **blocco di istanza unica**: un secondo avvio per lo stesso archivio
-riporta in primo piano il pannello già aperto, senza duplicare backend e monitoraggi.
-I dati restano nella cartella locale dell’utente anche alla disinstallazione.
-
-Sono previste anche versioni **macOS Intel e Apple Silicon**, dopo l’adattamento
-della protezione dei dati al Portachiavi macOS e le build/test su Mac. Non sono
-ancora disponibili e non c’è una data di rilascio.
-
-## 💻 Risorse misurate nel prototipo Windows
-
-Misura locale del **9 ottobre 2026**, versione **1.04**, su Windows 11 con
-AMD Ryzen 9 5900X (24 processori logici) e 64 GiB di RAM. È stata usata l’app
-compilata, con un archivio di prova vuoto e senza ricette attive: nessuna chiamata
-al CUP, prenotazione o notifica Telegram. Sono inclusi tutti i processi Electron
-e il backend Python (**7 processi**).
-
-| Condizione | Memoria residente totale¹ | Memoria privata impegnata² | CPU media³ |
-| :--- | ---: | ---: | ---: |
-| In background | 598.9 MiB | 251.4 MiB | 0.02% |
-| Pannello aperto | 605.4 MiB | 248.7 MiB | 0.00% |
-
-**Installer:** 121.0 MiB. **Cartella dell’app compilata:** 433.2 MiB,
-esclusi archivi personali e documenti esportati.
-
-15 campioni per condizione, con almeno un secondo tra i campioni; i primi 5
-sono esclusi dai valori della tabella. Memoria: mediana dei campioni rimanenti.
-CPU: media, normalizzata sulla capacità complessiva dei 24 processori logici.
-
-¹ Somma dei working set dei processi: include pagine condivise, che possono
-essere contate più volte. È un’indicazione della memoria residente, non della
-RAM fisica esclusiva dell’app. ² Memoria privata impegnata, che può essere
-residente oppure paginata: non equivale alla sola RAM occupata.
-³ Misura a riposo, dopo la fase iniziale.
-
-Questi valori descrivono una prova breve su un solo computer, non requisiti
-minimi o massimi garantiti. Ricerca CUP, monitoraggio attivo, esportazione PDF,
-quantità di ricette e uso prolungato possono produrre consumi diversi; non sono
-stati misurati in questa prova.
-
-## 🗺️ Regioni e prossimi passi
+## Regioni e sviluppi futuri
 
 | Area | Stato |
 | :--- | :--- |
-| **Liguria** | Prima integrazione del progetto, attualmente in sviluppo e verifica sul flusso PrenotoSalute. |
-| **Toscana** | Integrazione in lavorazione. Il monitoraggio automatico non è disponibile nella v1.04 attuale. |
-| **Altre regioni** | Possibili sviluppi futuri, senza una data o una copertura garantita. |
-| **Installer Windows** | EXE autonomo disponibile come build locale di prova; distribuzione pubblica dopo le verifiche. |
-| **macOS Intel e Apple Silicon** | Versioni previste, ancora da implementare e verificare. Nessun installer Mac disponibile al momento e nessuna data di rilascio. |
-| **Distribuzione dell’app** | Arriverà dopo le verifiche dei flussi, dei documenti, delle notifiche e dell’installazione. |
+| **Liguria** | Prima regione prevista: integrazione con PrenotoSalute nelle fasi finali di sviluppo e verifica. |
+| **Toscana** | Supporto ancora in sviluppo: il monitoraggio non sarà disponibile nella prima versione. |
+| **Altre regioni** | Obiettivo futuro, senza date o copertura garantite. |
 
-L’obiettivo è partire da un’app semplice da installare, affidabile nei passaggi più delicati e comprensibile anche quando il portale non restituisce posti o segnala un errore.
+Tappe previste, senza date di rilascio:
 
-## 🤝 Un progetto per rendere la ricerca più accessibile
+1. Prima versione desktop per Windows, con supporto alla Liguria.
+2. Prenotazione dall’app, sempre con la tua conferma, con documenti e promemoria.
+3. Completamento del supporto alla Toscana.
+4. Estensione ad altre regioni.
+5. Applicazione mobile, con i dati conservati sul dispositivo. Non è prevista una web app.
 
-CUP Tracker è un aiuto nella consultazione e nella gestione degli appuntamenti, non un servizio sanitario ufficiale. Non assegna priorità cliniche, non garantisce tempi di attesa e non sostituisce il medico, il CUP o i percorsi di tutela previsti dal servizio sanitario.
+## Open source e versioni modificate
 
-Per capire cosa migliorare sono utili osservazioni su chiarezza, accessibilità e uso quotidiano. Quando segnali un problema, evita di pubblicare codici fiscali, tessere sanitarie, ricette, codici di prenotazione, token o documenti con dati personali. Usa esempi fittizi o schermate oscurate.
+Il codice sarà pubblicato con licenza **Apache 2.0**: chiunque potrà consultarlo, segnalare problemi e contribuire.
+
+Le versioni modificate da terzi non sono distribuite né controllate da R3DSI, che non ne risponde, ad esempio se cambiano la frequenza dei controlli. Non possono usare il nome CUP Tracker, il marchio R3DSI o i nostri contatti, né identificarsi come CUP Tracker verso i portali regionali. La versione ufficiale si scarica solo da [cuptracker.r3dsi.com](https://cuptracker.r3dsi.com).
+
+Quando apri una segnalazione, non pubblicare codici fiscali, tessere sanitarie, ricette, codici di prenotazione, token o documenti con dati personali: usa esempi fittizi o schermate oscurate.
+
+## Un ringraziamento
+
+CUP Tracker è nato prendendo ispirazione da [CUP Piemonte Checker](https://github.com/ilmondovero/cup-piemonte-checker), un progetto open source per il Piemonte. I due progetti sono indipendenti: non esiste una collaborazione o un’affiliazione tra loro.
+
+## Contatti
+
+R3DSI di Lorenzo Mercugliano · [hello@r3dsi.com](mailto:hello@r3dsi.com) · [Privacy policy del sito](https://cuptracker.r3dsi.com/privacy/)
 
 ---
 
 <div align="center">
 
-**Nato da un’esigenza quotidiana. Costruito per diventare utile a tutti.**
-
-Gratuito · Indipendente · Dati conservati sul dispositivo
-
-**CUP Tracker è un progetto indipendente, non ufficiale e non sponsorizzato da Regione Liguria.** Non è affiliato, patrocinato, autorizzato o sostenuto da Regione Liguria, Regione Toscana, Liguria Digitale, ASL o altri enti sanitari. I nomi dei servizi e degli enti sono citati soltanto per descrivere le integrazioni.
+<sub>CUP Tracker è un progetto indipendente di R3DSI, non affiliato né finanziato dalla Regione Liguria, dalla Regione Toscana o da enti sanitari. Non è un servizio sanitario ufficiale. Non garantisce disponibilità o tempi di attesa e non sostituisce il medico o il CUP. I nomi di enti e servizi sono citati solo per descrivere le integrazioni.</sub>
 
 </div>
